@@ -1,20 +1,13 @@
-import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner UserIn = new Scanner(System.in);
-        System.out.println("Enter the width of the rectangle: ");
-        int width = UserIn.nextInt();
-        System.out.println("Enter the length of the rectangle: ");
-        int length = UserIn.nextInt();
+        FullTime sara = new FullTime("Sara", "22222222", "33333333", "19123812", 20000);
+        FullTime jessica = new FullTime("jessica", "22222222", "33333333", "19123812", 20000);
+        Hourly carl = new Hourly("carl", "12312312", "1312512", "1231254125", 15);
+        Hourly john = new Hourly("john", "12312312", "1312512", "1231254125", 15);
 
-
-    }
-}
-
-class Rectangle{
-    int length;
-    int width;
-    public static void calculateArea(int l,int w){
-
+        carl.setMonthlyHours(160);
+        john.setMonthlyHours(160);
+        double totalPayroll = sara.pay()+jessica.pay()+ carl.pay()+john.pay();
+        System.out.println(totalPayroll);
     }
 }
